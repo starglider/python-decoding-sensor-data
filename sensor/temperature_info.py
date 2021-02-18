@@ -11,9 +11,9 @@ class TemperatureData(HouseInfo):
         return recs
 
     def get_data_by_area(self, rec_area=0):
-        recs = super("temperature", rec_area)
+        recs = super().get_data_by_area("temperature", rec_area)
         return self._convert_data(recs)
 
     def get_data_by_date(self, rec_date=date.today()):
-        recs = super("temperature", rec_date)
+        recs = super().get_data_by_date("temperature", rec_date)
         return self._convert_data(recs)
